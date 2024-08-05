@@ -1,7 +1,7 @@
 <a href=""><img src="" alt="DOI"></a> <a href=""><img src="http://timer2.compbio.cn/TabulaTIME" alt="Website"></a> 
 # Workflow for integrating tumor scRNA-seq data and constructing pan-cancer landscapes: TabulaTIME
 
-## 0 scRNA-seq data collection and preprocessing
+## 0. scRNA-seq data collection and preprocessing
 
 ### 0.1 Data collection
 
@@ -11,9 +11,19 @@ A total of 103 studies encompassing 4,479,563 cells were collated.
 
 ### 0.2 Data preprocessing
 
-A standardized analysis workflow based on MAESTRO v1.1.0 for processing all the collected datasets, including quality control, batch effect removal, and cell clustering. The raw count or TPM (if available) served as input for the workflow.  
+A standardized analysis workflow based on MAESTRO v1.1.0 for processing all the collected datasets, including quality control, batch effect evaluation and correction, and cell clustering. The raw count or TPM (if available) served as input for the workflow.  
 
- To ascertain the detailed process of single-cell RNA sequencing datasets, we kindly direct you to the comprehensive instructions available within the following GitHub repository: https://github.com/DongqingSun96/TISCH/tree/master/code.
+To ascertain the detailed process of single-cell RNA sequencing datasets, we kindly direct you to the comprehensive instructions available within the following GitHub repository: https://github.com/DongqingSun96/TISCH/tree/master/code.
+
+## 1. MetaCell identification
+
+To reduce the technical noises and computing resource costs, TabulaTIME grouped cells with similar expressions into metacells within each dataset. The average log TPM-transformed gene expression of all cells within each metacell was utilized to represent the metacell's expression.
+
+### 1.1 Determining the optimal number of cells per metacell
+
+### 1.2 Evaluating the performance of metacell
+
+### 1.3 Generating metacell within each datasets
 
 Tumor microenvironment (TME) evolves during malignant cell recruiting and reprograming the non-cancerous cells and remodeling the vasculature and extracellular matrix (ECM) to orchestrate a tumor-supportive environment. The composition and functional state of TME can vary considerably between the organ in which the tumor arises, due to the unique tissue-resident cells. Here, we collected the expression of 4,254,586 cells from 735 patient samples across 36 cancer types, and construct a pan-cancer landscape to depict the diversity of TMEs.
 ## Environment 
