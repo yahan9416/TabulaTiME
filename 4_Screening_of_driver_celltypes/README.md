@@ -7,17 +7,17 @@ odds ratios
 #### Spatial distribuion
 
 ## Function analysis
-### Functional associated signature score
-### Intratumor heterogeneity
+#### Functional associated signature score
+#### Intratumor heterogeneity
 Non-negative matrix factorization (NMF)
 
-### Functional enrichment analysis
+#### Functional enrichment analysis
 
-### Metabolic activity
+#### Metabolic activity
 
-### Cell communication 
+#### Cell communication 
 
 
 ## Clinical effect
-### Survival anlaysis
-### Immune infiltration 
+#### Survival anlaysis
+#### Immune infiltration 
