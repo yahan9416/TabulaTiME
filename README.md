@@ -84,11 +84,7 @@ From the GEO database, we collect the spatial transcriptomics (ST) data of 62 pa
 
 #### Quality control
 
-UMI count per spot (>1000)
-
-Gene number per spot (>250) 
-
-Precent MT gene per spot (<25%)
+UMI count per spot (>1000); Gene number per spot (>250); Precent MT gene per spot (<25%)
 
 
 ### 4.2 Malignant cell identification 
