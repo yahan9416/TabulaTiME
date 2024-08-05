@@ -1,8 +1,8 @@
-<a href=""><img src="" alt="DOI"></a> <a href=""><img src="http://timer2.compbio.cn/TabulaTIME" alt="Website"></a> 
+![image](https://github.com/user-attachments/assets/dc1f9747-c237-41aa-811f-1a12a531953f)<a href=""><img src="" alt="DOI"></a> <a href=""><img src="http://timer2.compbio.cn/TabulaTIME" alt="Website"></a> 
 # Workflow for integrating tumor scRNA-seq data and constructing pan-cancer landscapes: TabulaTIME
 
 ## 1. scRNA-seq data collection and preprocessing
-
+The increasing accumulation of scRNA-seq datasets in the public domain allows for the integration of tumor-associated datasets from different cancer types and stages. This integration helps to identify common characteristics of the TME and detect pan-cancer or organ-specific mechanisms. 
 ### 1.1 Data collection
 
 We collected the published cancer-associated scRNA-Seq datasets from 735 patients across 36 cancer types. These datasets were sourced from the GEO database (https://www.ncbi.nlm.nih.gov/geo/) and our previous work the Tumor Immune Single-cell Hub (TISCH) database (http://tisch.comp-genomics.org/home/). Additionally, we incorporated scRNA-Seq datasets derived from healthy donors, including 3 peripheral blood mononuclear cells (PBMC) and 6 datasets from normal tissues.
@@ -73,15 +73,49 @@ Annotation from the original studies
 ### 4.3 Spot deconvolutaion
 STRIDE by matched scRNA-Seq data or selected scRNA-Seq data from TISCH
 
-### 4.4 Spatial localization analysis
+## 5. Screening of driver cell types
+Screening of potential cancer-driven cell types by quantifying their relative abundance across different sources, cancer types, and spatial localization. Furthermore, it facilitated the investigation of cell type-specific functions, and the estimation of their effects on immune cell infiltration and prognosis
+### 5.1 Distribution
+#### Source preference analysis
+Analysis of variance (ANOVA) test
+
+odds ratios
+
+#### Cancer types preference analysis
+#### Spatial localization analysis
 Colocation analysis
 
 Distance measurement between Fibroblast to malignant cells
 
+### 5.2 Function analysis
+Functional associated signature score
 
-## 5. Screening of driver cell types
+Intratumor heterogeneity derived from Non-negative matrix factorization (NMF)
+
+Functional enrichment analysis
+
+Metabolic activity
+
+Cell communication 
+
+### 5.3 Clinical effect
+Survival anlaysis
+
+Immune infiltration 
 
 ## 6. Application
+
+TabulaTIME defined 56 unique cell types across different cancer types using scRNA-seq. With this high-resolution reference, we then sought to investigate whether we could stratify patients into different tumor subtypes based on their expressed ecotypes.
+Cell type annotation is vital for interpreting function phenotypes of cells when analyzing scRNA-seq datasets. A comprehensive and fully annotated dataset is highly needed for reference-based cell type annotation methods and could significantly improve annotation performance. We next tested whether the integrated blueprint from TabulaTIME could served as a reference map for pan-cancer single-cell annotation.
+### 6.1 Bulk ecotype analysis
+Cell type Ecotypes
+
+Patient Tumor microenviroment subtypes
+
+### 6.2 Automatic cell type annotation
+Reference map
+
+Marker gene list
 
 ## Environment 
     Ubuntu 9.3.0
