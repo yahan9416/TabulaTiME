@@ -1,2 +1,24 @@
-The analysis pipeline starts from count matrices and corresponding meta information (if available). The count matrices are usually downloaded from GEO. If there're only normalized count matrices like TPM or FPKM, they are also acceptable. The meta information can be derived from supplementary file in GEO or original paper, Series Matrix file in GEO, and other sources. The data collection and downloading can be finished by GEO_parser automatically. The relative codes can be found in 0_GEO_Parser.
+Data collection
+ Count table 
+ TPM table
+
+Quality control
+ Cell number per dataset (> 1000)
+ UMI count per cell (>1000)
+ Gene number per cell (>500) e Mitochondrial genes per cell (< 15%)
+ Doublets removal
+  Scrublet expected_doublet_rate=0.06
+  
+Data Pre-processing
+ Malignant cell identification
+  Annotation from the original studies 
+  Copy number variation
+  Malignant cell markers
+ Batch effect evaluation and correction Entropy-based metric
+  Canonical Correlation analysis
+ Cell clustering
+  Louvain algorithm
+ Cell type annotation
+  MAESTRO based on DE genes 
+  Manually curatition
 
