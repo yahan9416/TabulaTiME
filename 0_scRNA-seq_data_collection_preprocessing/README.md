@@ -1,10 +1,8 @@
-Data collection
+## Data collection
+Count table 
+TPM table
 
- Count table 
- 
- TPM table
-
-Quality control
+## Quality control
 
  Cell number per dataset (> 1000)
  
@@ -15,7 +13,7 @@ Quality control
  Doublets removal
   Scrublet expected_doublet_rate=0.06
   
-Data Pre-processing
+## Data Pre-processing
 
  Malignant cell identification
   Annotation from the original studies 
