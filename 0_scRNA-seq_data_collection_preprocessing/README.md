@@ -8,25 +8,19 @@ TPM table
  
  UMI count per cell (>1000)
  
- Gene number per cell (>500) e Mitochondrial genes per cell (< 15%)
+ Gene number per cell (>500) 
  
- Doublets removal
-  Scrublet expected_doublet_rate=0.06
+ Mitochondrial genes per cell (< 15%)
+ 
+ Doublets removal: Scrublet expected_doublet_rate=0.06
   
 ## Data Pre-processing
 
- Malignant cell identification
-  Annotation from the original studies 
-  Copy number variation
-  Malignant cell markers
+ Malignant cell identification: Annotation from the original studies; Copy number variation; Malignant cell markers
   
- Batch effect evaluation and correction Entropy-based metric
-  Canonical Correlation analysis
+ Batch effect evaluation and correction: Entropy-based metric; Canonical Correlation analysis
   
- Cell clustering
-  Louvain algorithm
+ Cell clustering: Louvain algorithm
   
- Cell type annotation
-  MAESTRO based on DE genes 
-  Manually curatition
+ Cell type annotation: MAESTRO based on DE genes; Manually curatition
 
