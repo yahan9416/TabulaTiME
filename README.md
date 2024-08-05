@@ -10,9 +10,39 @@ We collected the published cancer-associated scRNA-Seq datasets from 735 patient
 A total of 103 studies encompassing 4,479,563 cells were collated.
 
 ### 1.2 Data preprocessing
+#### Quality control
 
-A standardized analysis workflow based on MAESTRO v1.1.0 for processing all the collected datasets, including quality control, batch effect evaluation and correction, and cell clustering. The raw count or TPM (if available) served as input for the workflow.  
-
+ Cell number per dataset (> 1000)
+ 
+ UMI count per cell (>1000)
+ 
+ Gene number per cell (>500) 
+ 
+ Mitochondrial genes per cell (< 15%)
+ 
+ Doublets removal: Scrublet expected_doublet_rate=0.06
+ 
+#### Malignant cell identification
+ 
+ Annotation from the original studies
+ 
+ Copy number variation
+ 
+ Malignant cell markers
+  
+#### Batch effect evaluation and correction
+ Entropy-based metric
+ 
+ Canonical Correlation analysis
+ 
+#### Cell clustering
+ Louvain algorithm
+  
+#### Cell type annotation:
+ MAESTRO based on DE genes
+ 
+ Manually curatition
+ 
 To ascertain the detailed process of single-cell RNA sequencing datasets, we kindly direct you to the comprehensive instructions available within the following GitHub repository: https://github.com/DongqingSun96/TISCH/tree/master/code.
 
 ## 2. MetaCell identification
@@ -61,7 +91,15 @@ To investigate the spatial localization of specific cell types and the relative 
 
 ### 4.1 ST Data collection and pre-processing
 From the GEO database, we collect the spatial transcriptomics (ST) data of 62 patients from six cancer types, including primary liver cancer (PLC), ovarian carcinoma (OV), pancreatic adenocarcinoma (PAAD), colorectal cancer (CRC), breast cancer (BRCA), and squamous cell carcinoma (SCC).
-To safeguard data quality, we filtered the spots based on a minimum detection threshold of 250 genes and a maximum of 25% mitochondrial gene expression, while also excluding genes with fewer than 10 read counts or those expressed in fewer than two spots.
+
+#### Quality control
+
+UMI count per spot (>1000)
+
+Gene number per spot (>250) 
+
+Precent MT gene per spot (<25%)
+
 
 ### 4.2 Malignant cell identification 
 Malignant cell markers
@@ -106,6 +144,7 @@ Immune infiltration
 ## 6. Application
 
 TabulaTIME defined 56 unique cell types across different cancer types using scRNA-seq. With this high-resolution reference, we then sought to investigate whether we could stratify patients into different tumor subtypes based on their expressed ecotypes.
+
 Cell type annotation is vital for interpreting function phenotypes of cells when analyzing scRNA-seq datasets. A comprehensive and fully annotated dataset is highly needed for reference-based cell type annotation methods and could significantly improve annotation performance. We next tested whether the integrated blueprint from TabulaTIME could served as a reference map for pan-cancer single-cell annotation.
 ### 6.1 Bulk ecotype analysis
 Cell type Ecotypes
