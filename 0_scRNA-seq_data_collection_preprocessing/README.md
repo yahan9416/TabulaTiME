@@ -16,13 +16,24 @@ TPM table
   
 ## Data Pre-processing
 
- Malignant cell identification: Annotation from the original studies; Copy number variation; Malignant cell markers
+ ### Malignant cell identification
+ 
+ Annotation from the original studies
+ 
+ Copy number variation
+ 
+ Malignant cell markers
   
- Batch effect evaluation and correction: Entropy-based metric; Canonical Correlation analysis
+ ### Batch effect evaluation and correction
+ Entropy-based metric
+ Canonical Correlation analysis
   
- Cell clustering: Louvain algorithm
+ ### Cell clustering
+ Louvain algorithm
   
- Cell type annotation: MAESTRO based on DE genes; Manually curatition
+ ### Cell type annotation:
+ MAESTRO based on DE genes
+ Manually curatition
 
  ## 
  To ascertain the detailed process of single-cell RNA sequencing datasets, we kindly direct you to the comprehensive instructions available within the following GitHub repository: https://github.com/DongqingSun96/TISCH/tree/master/code.
