@@ -20,28 +20,40 @@ To ascertain the detailed process of single-cell RNA sequencing datasets, we kin
 To reduce the technical noises and computing resource costs, TabulaTIME grouped cells with similar expressions into metacells within each dataset. The average log TPM-transformed gene expression of all cells within each metacell was utilized to represent the metacell's expression.
 
 ### 1.1 Determining the optimal number of cells per metacell
+Gene Coverage
+
+Within metacell variation (GINI index)
 
 ### 1.2 Evaluating the performance of metacell
+Local inverse Simpson’s Index (LISI)
+
+Biological program signature scores
 
 ### 1.3 Generating metacell within each datasets
+Each metacell was generated from a specific sample, the clinical information-including tissue origin, treatment, and response conditions-remained consistent with that of the corresponding samples from which they were derived
 
-Tumor microenvironment (TME) evolves during malignant cell recruiting and reprograming the non-cancerous cells and remodeling the vasculature and extracellular matrix (ECM) to orchestrate a tumor-supportive environment. The composition and functional state of TME can vary considerably between the organ in which the tumor arises, due to the unique tissue-resident cells. Here, we collected the expression of 4,254,586 cells from 735 patient samples across 36 cancer types, and construct a pan-cancer landscape to depict the diversity of TMEs.
+## 2. Metacell integration 
+For the totality of metacells derived from all scRNA-seq datasets, we integrated the metacells, then evaluated and rectified any prevailing batch effects.
+
+To gain more detailed insights into the metacell heterogeneity of specific cell types, we divide all cells into six lineages for downstream analysis, , including cytotoxic lymphocytes (CD8+ T and NK cells), conventional and regulatory lymphocytes (conventional CD4+ T and regulatory T cells), B lymphocytes (B and plasma cells), myeloid cells (monocyte, macrophage, mast, dendritic cells), fibroblasts (fibroblast and myofibroblasts), endothelial cells, and epithelial cells.
+### Identifying the optimal batch effect correction method
+1-Adjusted rand index (1-ARI)
+
+Local Inverse Simpson's Index (LISI)
+
+Entropy
+
+Average Silhouette Width (ASW)
+### Identifying the optimal batch effect correction method
+
+## 3. Spatial transcriptomics data collection and preprocessing
+
+## 4. Screening of driver cell types
+
+## 5. Application
+
 ## Environment 
     Ubuntu 9.3.0
     R version 4.0.5	
     Python version 3.8.10	
-
-## Install software
-### Install R package MAESTRO V1.4.1
-    conda config --add channels defaults
-    conda config --add channels liulab-dfci
-    conda config --add channels bioconda
-    conda config --add channels conda-forge
-    conda install mamba -c conda-forge
-    mamba create -n MAESTRO maestro=1.4.1 -c liulab-dfci
-### Install R package Seurat v2.3.4 	
-    source("https://z.umn.edu/archived-seurat")
-### Install R package Monocle v2.8 	
-    source("http://bioconductor.org/biocLite.R") 
-    biocLite("monocle")	
 
