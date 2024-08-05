@@ -1,6 +1,6 @@
 ## Distribution
 #### Source preference analysis
-Cell type proportion
+Analysis of variance (ANOVA) test
 
 odds ratios
 #### Cancer types preference analysis
