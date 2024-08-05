@@ -12,23 +12,13 @@ A total of 103 studies encompassing 4,479,563 cells were collated.
 ### 1.2 Data preprocessing
 #### Quality control
 
- Cell number per dataset (> 1000)
- 
- UMI count per cell (>1000)
- 
- Gene number per cell (>500) 
- 
- Mitochondrial genes per cell (< 15%)
+ Cell number per dataset (> 1000); UMI count per cell (>1000); Gene number per cell (>500); Mitochondrial genes per cell (< 15%)
  
  Doublets removal: Scrublet expected_doublet_rate=0.06
  
 #### Malignant cell identification
  
- Annotation from the original studies
- 
- Copy number variation
- 
- Malignant cell markers
+ Annotation from the original studies; Copy number variation; Malignant cell markers
   
 #### Batch effect evaluation and correction
  Entropy-based metric
