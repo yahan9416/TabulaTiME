@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/dc1f9747-c237-41aa-811f-1a12a531953f)<a href=""><img src="" alt="DOI"></a> <a href=""><img src="http://timer2.compbio.cn/TabulaTIME" alt="Website"></a> 
+<a href=""><img src="" alt="DOI"></a> <a href=""><img src="http://timer2.compbio.cn/TabulaTIME" alt="Website"></a> 
 # Workflow for integrating tumor scRNA-seq data and constructing pan-cancer landscapes: TabulaTIME
 
 ## 1. scRNA-seq data collection and preprocessing
