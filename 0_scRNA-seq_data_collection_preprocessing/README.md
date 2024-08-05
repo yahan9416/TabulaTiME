@@ -24,3 +24,6 @@ TPM table
   
  Cell type annotation: MAESTRO based on DE genes; Manually curatition
 
+ ## 
+ To ascertain the detailed process of single-cell RNA sequencing datasets, we kindly direct you to the comprehensive instructions available within the following GitHub repository: https://github.com/DongqingSun96/TISCH/tree/master/code.
+
