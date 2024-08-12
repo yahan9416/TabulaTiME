@@ -1,4 +1,4 @@
-##Run_ MetaCell_identification.sh
+## Run_ MetaCell_identification.sh
 
 ### Generating metacell within each datasets 
 Metacells encompassing distinct cell number
