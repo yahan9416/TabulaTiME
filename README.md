@@ -39,18 +39,18 @@ To ascertain the detailed process of single-cell RNA sequencing datasets, we kin
 
 To reduce the technical noises and computing resource costs, TabulaTIME grouped cells with similar expressions into metacells within each dataset. The average log TPM-transformed gene expression of all cells within each metacell was utilized to represent the metacell's expression.
 
-### 2.1 Determining the optimal number of cells per metacell
+### 2.1 Generating metacell within each datasets
+Each metacell was generated from a specific sample, the clinical information-including tissue origin, treatment, and response conditions-remained consistent with that of the corresponding samples from which they were derived
+
+### 2.2 Determining the optimal number of cells per metacell
 Gene Coverage
 
 Within metacell variation (GINI index)
 
-### 2.2 Evaluating the performance of metacell
+### 2.3 Evaluating the performance of metacell
 Local inverse Simpson’s Index (LISI)
 
 Biological program signature scores
-
-### 2.3 Generating metacell within each datasets
-Each metacell was generated from a specific sample, the clinical information-including tissue origin, treatment, and response conditions-remained consistent with that of the corresponding samples from which they were derived
 
 ## 3. Metacell integration 
 For the totality of metacells derived from all scRNA-seq datasets, we integrated the metacells, then evaluated and rectified any prevailing batch effects.
