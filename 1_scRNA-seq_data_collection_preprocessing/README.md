@@ -1,4 +1,4 @@
-Run_scRNAseq_data_analysis.sh
+##  Run_scRNAseq_data_analysis.sh
 
 ### Data collection
 Count table 
