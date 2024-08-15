@@ -39,42 +39,11 @@ To ascertain the detailed process of single-cell RNA sequencing datasets, we kin
 
 To reduce the technical noises and computing resource costs, TabulaTIME grouped cells with similar expressions into metacells within each dataset. The average log TPM-transformed gene expression of all cells within each metacell was utilized to represent the metacell's expression.
 
-### 2.1 Generating metacell within each datasets
-Each metacell was generated from a specific sample, the clinical information-including tissue origin, treatment, and response conditions-remained consistent with that of the corresponding samples from which they were derived
-
-### 2.2 Determining the optimal number of cells per metacell
-Gene Coverage
-
-Within metacell variation (GINI index)
-
-### 2.3 Evaluating the performance of metacell
-Local inverse Simpson’s Index (LISI)
-
-Biological program signature scores
-
 ## 3. Metacell integration 
 For the totality of metacells derived from all scRNA-seq datasets, we integrated the metacells, then evaluated and rectified any prevailing batch effects.
 
 To gain more detailed insights into the metacell heterogeneity of specific cell types, we divide all cells into six lineages for downstream analysis, , including cytotoxic lymphocytes (CD8+ T and NK cells), conventional and regulatory lymphocytes (conventional CD4+ T and regulatory T cells), B lymphocytes (B and plasma cells), myeloid cells (monocyte, macrophage, mast, dendritic cells), fibroblasts (fibroblast and myofibroblasts), endothelial cells, and epithelial cells.
-### 3.1 Identifying the optimal batch effect correction method
-1-Adjusted rand index (1-ARI)
 
-Local Inverse Simpson's Index (LISI)
-
-Entropy
-
-Average Silhouette Width (ASW)
-### 3.2 Identifying the optimal clustering resolution
-
-Silhouette score
-
-Clustree
-
-### 3.3 Metacell annotation
-
-Manually curatition
-
-ROGUE
 
 ## 4. Spatial transcriptomics (ST) data collection and preprocessing
 To investigate the spatial localization of specific cell types and the relative positioning of two particular cell types, we utilized spatial transcriptomic data, encompassing gene-spot matrices, cell coordinates, and corresponding tissue images.
@@ -97,50 +66,14 @@ Annotation from the original studies
 ### 4.3 Spot deconvolutaion
 STRIDE by matched scRNA-Seq data or selected scRNA-Seq data from TISCH
 
-## 5. Screening of driver cell types
+## 5. Characterization of cell subtypes
 Screening of potential cancer-driven cell types by quantifying their relative abundance across different sources, cancer types, and spatial localization. Furthermore, it facilitated the investigation of cell type-specific functions, and the estimation of their effects on immune cell infiltration and prognosis
-### 5.1 Distribution
-#### Source preference analysis
-Analysis of variance (ANOVA) test
-
-odds ratios
-
-#### Cancer types preference analysis
-#### Spatial localization analysis
-Colocation analysis
-
-Distance measurement between Fibroblast to malignant cells
-
-### 5.2 Function analysis
-Functional associated signature score
-
-Intratumor heterogeneity derived from Non-negative matrix factorization (NMF)
-
-Functional enrichment analysis
-
-Metabolic activity
-
-Cell communication 
-
-### 5.3 Clinical effect
-Survival anlaysis
-
-Immune infiltration 
 
 ## 6. Application
 
 TabulaTIME defined 56 unique cell types across different cancer types using scRNA-seq. With this high-resolution reference, we then sought to investigate whether we could stratify patients into different tumor subtypes based on their expressed ecotypes.
 
 Cell type annotation is vital for interpreting function phenotypes of cells when analyzing scRNA-seq datasets. A comprehensive and fully annotated dataset is highly needed for reference-based cell type annotation methods and could significantly improve annotation performance. We next tested whether the integrated blueprint from TabulaTIME could served as a reference map for pan-cancer single-cell annotation.
-### 6.1 Bulk ecotype analysis
-Cell type Ecotypes
-
-Patient Tumor microenviroment subtypes
-
-### 6.2 Automatic cell type annotation
-Reference map
-
-Marker gene list
 
 ## Environment 
     Ubuntu 9.3.0
