@@ -1,77 +1,29 @@
-<a href=""><img src="" alt="DOI"></a> <a href=""><img src="http://timer2.compbio.cn/TabulaTIME" alt="Website"></a> 
+<a href=""><img src="" alt="DOI"></a>
 # TabulaTIME: A Workflow for Integrating Single-Cell RNA Sequencing Data of Tumors and Building Pan-Cancer Landscapes
 
-##### To characterize the heterogeneous composition and evolution of TME during tumor initiation, progression, and metastasis across different cancer types, we present the Tabula of the Tumor Immune Microenvironment (TabulaTIME) framework. TabulaTIME characterized the pan-cancer TME landscape based on the integration of large-scale scRNA-seq datasets. The framework consists of five major modules: tumor-related scRNA-seq data collection, data pre-processing and MetaCell identification, integration of all lineages, lineage-specific integration, and characterization of cell sub-types. <a href=""><img src="http://timer2.compbio.cn/TabulaTIME" alt="TabulaTIME"></a>  
+### To characterize the heterogeneous composition and evolution of TME during tumor initiation, progression, and metastasis across different cancer types, we present the Tabula of the Tumor Immune Microenvironment (TabulaTIME) framework. TabulaTIME characterized the pan-cancer TME landscape based on the integration of large-scale scRNA-seq datasets. The framework consists of five major modules: tumor-related scRNA-seq data collection, data pre-processing and MetaCell identification, integration of all lineages, lineage-specific integration, and characterization of cell sub-types. <a href=""><img src="http://timer2.compbio.cn/TabulaTIME" alt="TabulaTIME"></a>  
 
 <img src="https://github.com/yahan9416/TabulaTiME/blob/main/Image/TabulaTIME_workflow.png" alt="Image Description" width="100%" />
 
 ## 1. scRNA-seq data collection and preprocessing
-The increasing accumulation of scRNA-seq datasets in the public domain allows for the integration of tumor-associated datasets from different cancer types and stages. This integration helps to identify common characteristics of the TME and detect pan-cancer or organ-specific mechanisms. 
-### 1.1 Data collection
+To illuminate the intricate dynamics of the tumor microenvironment (TME) throughout the genesis and progression of tumors across a spectrum of cancer types, we aggregated single-cell RNA sequencing (scRNA-Seq) datasets from 746 donors representing 36 distinct cancer varieties. These datasets were meticulously curated from the GEO database and our prior investigations within the Tumor Immune Single-cell Hub (TISCH) database.
 
-We collected the published cancer-associated scRNA-Seq datasets from 735 patients across 36 cancer types. These datasets were sourced from the GEO database (https://www.ncbi.nlm.nih.gov/geo/) and our previous work the Tumor Immune Single-cell Hub (TISCH) database (http://tisch.comp-genomics.org/home/). Additionally, we incorporated scRNA-Seq datasets derived from healthy donors, including 3 peripheral blood mononuclear cells (PBMC) and 6 datasets from normal tissues.
-
-A total of 103 studies encompassing 4,479,563 cells were collated.
-
-### 1.2 Data preprocessing
-#### Quality control
-
- Cell number per dataset (> 1000); UMI count per cell (>1000); Gene number per cell (>500); Mitochondrial genes per cell (< 15%)
- 
- Doublets removal: Scrublet expected_doublet_rate=0.06
- 
-#### Malignant cell identification
- 
- Annotation from the original studies; Copy number variation; Malignant cell markers
-  
-#### Batch effect evaluation and correction
- Entropy-based metric
- 
- Canonical Correlation analysis
- 
-#### Cell clustering
- Louvain algorithm
-  
-#### Cell type annotation:
- MAESTRO based on DE genes
- 
- Manually curatition
- 
-To ascertain the detailed process of single-cell RNA sequencing datasets, we kindly direct you to the comprehensive instructions available within the following GitHub repository: https://github.com/DongqingSun96/TISCH/tree/master/code.
+All collected datasets underwent rigorous pre-processing through the MAESTRO workflow, which encompassed quality control, elimination of doublets and batch effects, cell clustering, and precise cell type annotation. Ultimately, a total of 103 studies were collated, comprising an impressive 4,479,563 cells.
 
 ## 2. MetaCell identification
-
-To reduce the technical noises and computing resource costs, TabulaTIME grouped cells with similar expressions into metacells within each dataset. The average log TPM-transformed gene expression of all cells within each metacell was utilized to represent the metacell's expression.
+To mitigate the impact of technical disturbances and minimize computing resource expenses, TabulaTIME employed a strategy of grouping cells with similar expressions into MetaCells within each dataset, ensuring that each MetaCell encompassed approximately 30 cells. The average log TPM-transformed gene expression of all cells within each MetaCell was utilized as a representative measure of the MetaCell's expression.
 
 ## 3. Metacell integration 
-For the totality of metacells derived from all scRNA-seq datasets, we integrated the metacells, then evaluated and rectified any prevailing batch effects.
+For the entirety of metacells derived from all scRNA-seq datasets, we conducted an integrative analysis, subsequently assessing and correcting any prevailing batch effects.
 
-To gain more detailed insights into the metacell heterogeneity of specific cell types, we divide all cells into six lineages for downstream analysis, , including cytotoxic lymphocytes (CD8+ T and NK cells), conventional and regulatory lymphocytes (conventional CD4+ T and regulatory T cells), B lymphocytes (B and plasma cells), myeloid cells (monocyte, macrophage, mast, dendritic cells), fibroblasts (fibroblast and myofibroblasts), endothelial cells, and epithelial cells.
+To delve deeper into the metacell heterogeneity within specific cell types, we categorized all cells into six distinct lineages for downstream analysis: cytotoxic lymphocytes (CD8+ T and NK cells), conventional and regulatory lymphocytes (conventional CD4+ T and regulatory T cells), B lymphocytes (B and plasma cells), myeloid cells (monocytes, macrophages, mast cells, dendritic cells), fibroblasts (fibroblasts and myofibroblasts), endothelial cells, and epithelial cells.
 
 
 ## 4. Spatial transcriptomics (ST) data collection and preprocessing
 To investigate the spatial localization of specific cell types and the relative positioning of two particular cell types, we utilized spatial transcriptomic data, encompassing gene-spot matrices, cell coordinates, and corresponding tissue images.
 
-### 4.1 ST Data collection and pre-processing
-From the GEO database, we collect the spatial transcriptomics (ST) data of 62 patients from six cancer types, including primary liver cancer (PLC), ovarian carcinoma (OV), pancreatic adenocarcinoma (PAAD), colorectal cancer (CRC), breast cancer (BRCA), and squamous cell carcinoma (SCC).
-
-#### Quality control
-
-UMI count per spot (>1000); Gene number per spot (>250); Precent MT gene per spot (<25%)
-
-
-### 4.2 Malignant cell identification 
-Malignant cell markers
-
-Copy number variation
-
-Annotation from the original studies
-
-### 4.3 Spot deconvolutaion
-STRIDE by matched scRNA-Seq data or selected scRNA-Seq data from TISCH
-
-## 5. Characterization of cell subtypes
-Screening of potential cancer-driven cell types by quantifying their relative abundance across different sources, cancer types, and spatial localization. Furthermore, it facilitated the investigation of cell type-specific functions, and the estimation of their effects on immune cell infiltration and prognosis
+## 5. Characterization of MetaCell subtypes
+To facilitate the characterization of MetaCell subtypes, we examined the distribution of subtypes across various sources and cancer types, as well as the functions and phenotypes of subtypes, and their impact on survival.
 
 ## 6. Application
 
