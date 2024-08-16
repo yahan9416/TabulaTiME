@@ -1,23 +1,39 @@
-### Distribution
-##### Source preference analysis
-Analysis of variance (ANOVA) test
+## characterization of cell sub-types
 
-odds ratios
-#### Cancer types preference analysis
-#### Spatial distribuion
+#### Step 1. Distribution
+    #Source preference analysis
+    #ANOVA
+    ANOVA_celltype_proportion.R
+    #odds ratios
+    Odds_Ratios_celltype_source_distribution.R
+    #Cancer types preference analysis
 
-### Function analysis
-#### Functional associated signature score
-#### Intratumor heterogeneity
-Non-negative matrix factorization (NMF)
+### Step 2. Function analysis
+    #Functional associated signature score
+    Signature_score_T.R
+    Signature_score_Myeloid.R
+    
+    #Intratumor heterogeneity
+    #Non-negative matrix factorization (NMF)
+    NMF_MetaPrograms_identification.R
+    Biological_program_generated_NMF.R
+    
+    #Functional enrichment analysis
+    library(clusterProfiler)
+    enricher()
 
-#### Functional enrichment analysis
+    
+    #Metabolic activity
+    Metabilic_activity_each_cell.R
 
-#### Metabolic activity
+    
+    #Cell communication
+    CellChat.R
+    cellPhoneDB.sh
 
-#### Cell communication 
 
+### Step 3. Clinical effect
+    #Survival anlaysis
+    Survival_analysis.R
+    Stouffer_Combind_Zscore.r
 
-### Clinical effect
-#### Survival anlaysis
-#### Immune infiltration 
