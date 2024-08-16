@@ -12,6 +12,6 @@
     R GINI_index_within_metacell_variation.R Metacell_info_path Seurat_object_path
 
 ### Step 3. Evaluating the performance of MetaCell
-    #Local inverse Simpson’s Index LISI
+    #Local inverse Simpson’s Index (LISI)
     R LISI_quantitatively_evaluate_integration.R Integrated_seurat_obj
 
