@@ -3,10 +3,7 @@
     #Patient Tumor microenviroment subtypes
     #Cell type Ecotypes
     Define_Ecosystem_of_TCGA_dataset.R
-
     
-
-
     #Benchmark with similar studies
     Benchmark_TabulaTIME_similiary_stuides_Patient_TME_subtypes.R
     Benchmark_TabulaTIME_similiary_stuides_ColdHot_tumor.R
