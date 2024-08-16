@@ -14,6 +14,9 @@ From the GEO database, we collect the ST data of 62 patients of 6 cancer types a
     # Spot deconvolutaion
     STRIDE deconvolve --sc-count scRNA_count_matrix.txt --sc-celltype scRNA_meta_info.txt --st-count  filtered_feature_bc_matrix.h5  --outdir Result/STRIDE --outprefix Sample --normalize
 
+### Step 4. Spatial localization analysis
+    #Colocation analysis
+    R Celltype_colocalization.R
 
 
 
