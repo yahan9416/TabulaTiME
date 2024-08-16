@@ -23,11 +23,9 @@
     #Functional enrichment analysis
     library(clusterProfiler)
     enricher()
-
     
     #Metabolic activity
     Metabilic_activity_each_cell.R
-
     
     #Cell communication
     CellChat.R
