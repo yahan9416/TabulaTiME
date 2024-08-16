@@ -1,7 +1,7 @@
 <a href=""><img src="" alt="DOI"></a> <a href=""><img src="http://timer2.compbio.cn/TabulaTIME" alt="Website"></a> 
 # TabulaTIME: A Workflow for Integrating Single-Cell RNA Sequencing Data of Tumors and Building Pan-Cancer Landscapes
 
-<img src="https://github.com/yahan9416/TabulaTiME/blob/main/Image/TabulaTIME_workflow.png" alt="Image Description" width="1600" />
+<img src="https://github.com/yahan9416/TabulaTiME/blob/main/Image/TabulaTIME_workflow.png" alt="Image Description" width="100%" />
 
 ## 1. scRNA-seq data collection and preprocessing
 The increasing accumulation of scRNA-seq datasets in the public domain allows for the integration of tumor-associated datasets from different cancer types and stages. This integration helps to identify common characteristics of the TME and detect pan-cancer or organ-specific mechanisms. 
