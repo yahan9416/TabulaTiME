@@ -5,16 +5,12 @@ Count table
 TPM table
 
 ### Quality control
+    MAESTRO mtx-to-h5 --type Gene --matrix matrix.mtx --feature features.tsv --gene-column 2 --barcode barcodes.tsv --species GRCh38 --directory . --outprefix "Sample1"
+    MAESTRO merge-h5 --type Gene --h5 sample1.h5 sample2.h5
+    MAESTRO scrna-analysis --format h5 --matrix ./TabulaTIME_GSE1.h5 \
+--count-cutoff 1000 --gene-cutoff 500 --assembly GRCh38 \
+--directory . --outprefix TabulaTIME_GSE1
 
- Cell number per dataset (> 1000)
- 
- UMI count per cell (>1000)
- 
- Gene number per cell (>500) 
- 
- Mitochondrial genes per cell (< 15%)
- 
- Doublets removal: Scrublet expected_doublet_rate=0.06
   
 ### Data Pre-processing
 
