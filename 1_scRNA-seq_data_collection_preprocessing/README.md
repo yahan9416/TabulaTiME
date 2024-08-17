@@ -23,7 +23,7 @@ All datasets were sourced from the GEO database and our previous work the Tumor 
     R Copykat.R RowCount_matrix
     R inferCNV.R RowCount_matrix inferCNV_gene_order_file.txt
     
-    #Batch effect evaluation and correction
+    # Batch effect evaluation and correction
     R Entropy_evaluated_batcheffect.R Seurat_object_path
     R Correct_batch_effect_by_CCA.R Seurat_object_path
 
