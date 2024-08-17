@@ -6,7 +6,7 @@ To characterize the heterogeneous composition and evolution of TME during tumor 
 <img src="https://github.com/yahan9416/TabulaTiME/blob/main/Image/TabulaTIME_workflow.png" alt="Image Description" width="100%" />
 
 ## 1. scRNA-seq data collection and preprocessing
-To illuminate the intricate dynamics of the tumor microenvironment (TME) throughout the genesis and progression of tumors across a spectrum of cancer types, we aggregated single-cell RNA sequencing (scRNA-Seq) datasets from 746 donors representing 36 distinct cancer varieties. 
+To illuminate the intricate dynamics of the tumor microenvironment (TME) throughout the genesis and progression of tumors across a spectrum of cancer types, we aggregated single-cell RNA sequencing (scRNA-Seq) datasets from 746 donors representing 36 distinct cancer types. 
 All collected datasets underwent rigorous pre-processing through the MAESTRO workflow, which encompassed quality control, elimination of doublets and batch effects, cell clustering, and precise cell type annotation. Ultimately, a total of 103 studies were collated, comprising an impressive 4,479,563 cells.
 
 ## 2. MetaCell identification
