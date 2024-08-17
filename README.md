@@ -1,8 +1,10 @@
 # TabulaTIME: A Workflow for Integrating Single-Cell RNA Sequencing Data of Tumors and Building Pan-Cancer Landscapes
 
-To characterize the heterogeneous composition and evolution of TME during tumor initiation, progression, and metastasis across different cancer types, we present the Tabula of the Tumor Immune Microenvironment (TabulaTIME) framework. TabulaTIME characterized the pan-cancer TME landscape based on the integration of large-scale scRNA-seq datasets. The framework consists of five major modules: tumor-related scRNA-seq data collection, data pre-processing and MetaCell identification, integration of all lineages, lineage-specific integration, and characterization of cell sub-types. [TabulaTIME Website](http://timer2.compbio.cn/TabulaTIME)
+To characterize the heterogeneous composition and evolution of TME during tumor initiation, progression, and metastasis across different cancer types, we present the Tabula of the Tumor Immune Microenvironment (TabulaTIME) framework. TabulaTIME characterized the pan-cancer TME landscape based on the integration of large-scale scRNA-seq datasets. The framework consists of five major modules: tumor-related scRNA-seq data collection, data pre-processing and MetaCell identification, integration of all lineages, lineage-specific integration, and characterization of cell sub-types.
 
 <img src="https://github.com/yahan9416/TabulaTiME/blob/main/Image/TabulaTIME_workflow.png" alt="Image Description" width="100%" />
+
+The TabulaTIME can be explored and  visualization at [TabulaTIME Website](http://timer2.compbio.cn/TabulaTIME)
 
 ## 1. scRNA-seq data collection and preprocessing
 To illuminate the intricate dynamics of the tumor microenvironment (TME) throughout the genesis and progression of tumors across a spectrum of cancer types, we aggregated single-cell RNA sequencing (scRNA-Seq) datasets from 746 donors representing 36 distinct cancer types. 
