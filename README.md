@@ -19,10 +19,10 @@ To delve deeper into the metacell heterogeneity within specific cell types, we c
 
 
 ## 4. Spatial transcriptomics (ST) data collection and preprocessing
-To investigate the spatial localization of specific cell types and the relative positioning of two particular cell types, we utilized spatial transcriptomic data, encompassing gene-spot matrices, cell coordinates, and corresponding tissue images.
+To investigate the spatial localization of specific cell types and the relative positioning of two particular cell types, we collected 62 published ST slides of tumor tissue sections from six cancer types. These slides comprised gene-spot matrices, cell coordinates, and corresponding tissue images. Following the exclusion of low-quality spots and genes from each slide, we annotated malignant spots by integrating markers from the original studies and inferring copy number variations.
 
 ## 5. Characterization of Cell subtypes
-To facilitate the characterization of MetaCell subtypes, we examined the distribution of subtypes across various sources and cancer types, as well as the functions and phenotypes of subtypes, and their impact on survival.
+To facilitate the characterization of MetaCell subtypes, we examined the distribution of subtypes across various sources and cancer types, as well as the functions and phenotypes of subtypes, and their impact on survival. 
 
 ## 6. Application
 
