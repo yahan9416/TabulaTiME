@@ -13,7 +13,6 @@ To mitigate the impact of technical disturbances and minimize computing resource
 
 ## 3. Metacell integration 
 For the entirety of metacells derived from all scRNA-seq datasets, we conducted an integrative analysis, subsequently assessing and correcting any prevailing batch effects.
-
 To delve deeper into the metacell heterogeneity within specific cell types, we categorized all cells into six distinct lineages for downstream analysis: cytotoxic lymphocytes (CD8+ T and NK cells), conventional and regulatory lymphocytes (conventional CD4+ T and regulatory T cells), B lymphocytes (B and plasma cells), myeloid cells (monocytes, macrophages, mast cells, dendritic cells), fibroblasts (fibroblasts and myofibroblasts), endothelial cells, and epithelial cells.
 
 
@@ -26,7 +25,6 @@ To facilitate the characterization of MetaCell subtypes, we examined the distrib
 ## 6. Application
 
 TabulaTIME defined 56 unique cell types across different cancer types using scRNA-seq. With this high-resolution reference, we then sought to investigate whether we could stratify patients into different tumor subtypes based on their expressed ecotypes.
-
 Cell type annotation is vital for interpreting function phenotypes of cells when analyzing scRNA-seq datasets. A comprehensive and fully annotated dataset is highly needed for reference-based cell type annotation methods and could significantly improve annotation performance. We next tested whether the integrated blueprint from TabulaTIME could served as a reference map for pan-cancer single-cell annotation.
 
 ## Environment 
