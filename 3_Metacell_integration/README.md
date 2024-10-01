@@ -15,17 +15,21 @@
     #Local Inverse Simpson's Index (LISI)
     #Calculating the LISI score to evaluate the performance of batch effect correction
     R LISI_quantitatively_evaluate_integration.R CCA_seurat_obj_path
+    
     #Entropy
     #Calculating the Entropy score to evaluate the performance of batch effect correction.
     R Entropy_evaluated_batcheffect.R CCA_seurat_obj_path
+    
     #Adjusted Rand Index (ARI) was used to evaluate the performance of batch effect correction.
     R ARI_adjusted_rank_index.R CCA_seurat_obj_path
+    
     #Calculating the average silhouette score (ASW) for each cell to evaluate the optimal cluster resolution.
     R Silhouette_ASW.R CCA_seurat_obj_path
 
 ### Step 4. Identifying the optimal clustering resolution
     #Calculating the average silhouette score for each cell to evaluate the optimal cluster resolution.
     R Silhouette_ASW.R CCA_seurat_obj_path
+    
     #Clustree were used to select the optimal cluster resolution 
     R Clustree.R CCA_seurat_obj_path Marker_genes
 
