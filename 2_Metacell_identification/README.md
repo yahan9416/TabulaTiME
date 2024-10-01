@@ -14,5 +14,5 @@
 
 ### Step 3. Evaluating the performance of MetaCell
     #Local inverse Simpson’s Index (LISI)
-    #The Local Inverse Simpson Index (LISI) score was calculated to evaluate the performance of batch effect correction.
+    #The LISI score was calculated to evaluate the performance of batch effect correction.
     R LISI_quantitatively_evaluate_integration.R Integrated_seurat_obj
