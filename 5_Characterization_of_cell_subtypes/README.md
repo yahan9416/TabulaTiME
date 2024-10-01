@@ -42,5 +42,6 @@
     #Survival anlaysis
     #Evaluate the clinical outcomes associated with each cell type in the TCGA (The Cancer Genome Atlas) dataset.
     Survival_analysis.R TCGA_exp_path TCGA_clinical_path DEG_path
+    
     #Compute aggregate z-score and p_value using Stouffer's method.
     Stouffer_Combind_Zscore.r
