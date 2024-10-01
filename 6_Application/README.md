@@ -12,4 +12,6 @@
 ### Automatic cell type annotation
     #pre-train Reference map
     Selina_Celltype_Prediction.sh
+    TabulaTIME_pretrain_SELINA_params.pt
+    TabulaTIME_pretrain_SELINA_meta.pkl
    
