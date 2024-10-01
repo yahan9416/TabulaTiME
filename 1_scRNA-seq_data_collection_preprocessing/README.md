@@ -20,11 +20,11 @@ All datasets were sourced from the GEO database and our previous work the Tumor 
     R Doublet_remove_from_seuratobj.R Scrublet_result_path Seurat_object_path
 
     # Malignant cell identification
-    R Copykat.R RowCount_matrix
-    R inferCNV.R RowCount_matrix inferCNV_gene_order_file.txt
+    R Copykat.R RowCount_matrix num_cores
+    R inferCNV.R RowCount_matrix inferCNV_gene_order_file.txt Cell_annotation
     
     # Batch effect evaluation and correction
     R Entropy_evaluated_batcheffect.R Seurat_object_path
-    R Correct_batch_effect_by_CCA.R Seurat_object_path
+    R Correct_batch_effect_by_CCA.R Seurat_object_path Num_features Num_dimused Batch_info ncores
 
 To ascertain the detailed process of single-cell RNA sequencing datasets, we kindly direct you to the comprehensive instructions available within the following GitHub repository: https://github.com/DongqingSun96/TISCH/tree/master/code.
