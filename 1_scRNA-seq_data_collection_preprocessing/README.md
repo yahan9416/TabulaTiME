@@ -21,7 +21,7 @@ All datasets were sourced from the GEO database and our previous work the Tumor 
 
     # Malignant cell identification
     R Copykat.R RowCount_matrix num_cores
-    R inferCNV.R RowCount_matrix inferCNV_gene_order_file.txt Cell_annotation
+    R inferCNV.R RowCount_matrix inferCNV_gene_order_file Cell_annotation
     
     # Batch effect evaluation and correction
     R Entropy_evaluated_batcheffect.R Seurat_object_path
